@@ -50,24 +50,41 @@ nav{
 }
 
 .box1{
-    height: 100px;
-    width: 100px;
-    background-color: black;
-    position: relative;
+    height: 500px;
     padding: top 100px;
+    padding-left: 20px;
 }
+
+
 
 .box2{
     height: 100px;
-    width: 100px;
-    background-color: rgb(194, 52, 52);
-    position: static;
+    padding-left: 20px;
+    
 }
 
-.box3{
-    height: 100px;
-    width: 100px;
-    background-color: rgb(14, 224, 119);
+.box2-content {
+    display: flex;
+    justify-content: space-around; /* Membuat jarak yang sama antara gambar */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    flex-wrap: wrap; /* Membuat item berpindah baris jika layar kecil */
+}
+
+.box-item {
+    text-align: center; /* Menyelaraskan teks di bawah gambar */
+}
+
+.box-item img {
+    width: 150px; /* Ukuran gambar */
+    height: 150px; /* Ukuran gambar */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    object-fit: cover; /* Menjaga proporsi gambar saat dipangkas */
+    display: block; /* Menghapus spasi di bawah gambar */
+    margin: 0 auto; /* Menyelaraskan gambar secara horizontal */
+}
+
+h3 {
+    margin: 10px 0 0; /* Mengatur jarak atas teks dari gambar */
 }
 
 .box{
