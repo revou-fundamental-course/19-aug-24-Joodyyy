@@ -1,6 +1,9 @@
 *{
     font-family: "DM Serif Text", serif;
+    
 }
+
+
 
 .logo img{
     height: 40px;
@@ -65,28 +68,56 @@ nav{
 
 .box2-content {
     display: flex;
-    justify-content: space-around; /* Membuat jarak yang sama antara gambar */
-    align-items: center; /* Menyelaraskan item secara vertikal */
-    flex-wrap: wrap; /* Membuat item berpindah baris jika layar kecil */
+    justify-content: space-around; 
+    align-items: center; 
+    flex-wrap: wrap; 
 }
 
 .box-item {
-    text-align: center; /* Menyelaraskan teks di bawah gambar */
+    text-align: center; 
 }
 
 .box-item img {
-    width: 150px; /* Ukuran gambar */
-    height: 150px; /* Ukuran gambar */
-    border-radius: 50%; /* Membuat gambar menjadi bulat */
-    object-fit: cover; /* Menjaga proporsi gambar saat dipangkas */
-    display: block; /* Menghapus spasi di bawah gambar */
-    margin: 0 auto; /* Menyelaraskan gambar secara horizontal */
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto;
 }
 
 h3 {
-    margin: 10px 0 0; /* Mengatur jarak atas teks dari gambar */
+    margin: 10px 0 0; 
 }
 
 .box{
     padding-top: 100px;
+}
+
+.inptbox {
+    height: 300px;
+    width: 300px;
+    border: 2px black solid;
+    margin-top: 100px;
+    margin-left: -700px;
+}
+
+.outputbox {
+    height: 300px;
+    width: 300px;
+    border: 2px black solid;
+    margin-top: 100px;
+    margin-right: 100px;
+    padding-left: 10px;
+}
+
+.message{
+    padding-top: 200px;
+    padding-left: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+html{
+    scroll-behavior: smooth;
 }

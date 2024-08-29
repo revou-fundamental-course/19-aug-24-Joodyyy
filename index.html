@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <script src="js/index.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -19,22 +20,45 @@
             
 
         <section class="navbar">
-            <a href="#" class="nav-item">Home</a>        
-            <a href="#" class="nav-item">Our Profile</a>        
-            <a href="#" class="nav-item">Achivement</a>        
-            <a href="#" class="nav-item">Message Us</a>        
+            <a href="#Home" class="nav-item">Home</a>        
+            <a href="#Profile" class="nav-item" link="">Our Profile</a>        
+            <a href="#Facilitation" class="nav-item">Facilitation</a>        
+            <a href="#Message" class="nav-item">Message Us</a>        
 
         </section>
         
     </nav>
 
-    <div class="box">
-        <div class="box1">
+    <div  class="box" >
+        <div id="Home" class="box1">
             <h1>Hi Harfi, Welcome to Website</h1>
             <p>ini adalah Website latihan pertama</p>
+
+            <div class="box-slide" style="max-width:500px">
+                <img class="mySlides" src="lego1.jpg" style="width:100%">
+                <img class="mySlides" src="lego2.jpg" style="width:100%">
+                <img class="mySlides" src="lego3.jpg" style="width:100%">
+
+                <script>
+                    var myIndex = 0;
+                        carousel();
+
+                            function carousel() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides");
+                            for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";  
+                            }
+                        myIndex++;
+                            if (myIndex > x.length) {myIndex = 1}    
+                            x[myIndex-1].style.display = "block";  
+                            setTimeout(carousel, 2000);
+}
+                </script>
+            </div>
         </div>
         <hr>
-        <div class="box2">
+        <div id="Facilitation" class="box2">
             <h1>Our Facilitation</h1>
                 <div class="box2-content">
                         <div class="box-item">
@@ -48,10 +72,42 @@
                             <h3><img src="meetroom.jpg" alt="">Meeting Room</h3>
                         </div>
                 </div>
+                <hr>
                 
         </div>
         
     </div>
     
+    <div class="message" id="Message">
+        <h1>Message Us</h1>
+        <div id="numb" class="inptbox">
+            <form name="message-form" onsubmit="return validateForm()">
+                Nama: <input placeholder="Nama" type="text" name="full-name" id="full-name">
+                <br>
+    
+                Tanggal Lahir:
+                <input type="date" name="birth-date" id="birth-date">
+                <br>
+    
+                Jenis Kelamin:
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Laki-laki</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Perempuan</label>
+                <br>
+    
+                Pesan:
+                <textarea name="messages" placeholder="pesan" id="messages" style="height: 100px; ; width:100px ;"></textarea>
+                <br>
+    
+                <input type="submit" value="Submit" style="background-color: rgb(255, 136, 0);">
+            </form>
+        </div>
+        <div id="output" class="outputbox"></div>
+    </div>
+    
+    
+
+   
 </body>
 </html>
